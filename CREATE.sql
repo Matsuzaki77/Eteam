@@ -21,7 +21,7 @@ CREATE TABLE solds
 (sold_id VARCHAR(10) NOT NULL, 
  cart_id VARCHAR(100) NOT NULL, 
  user_id VARCHAR(100) NOT NULL, 
-shohin_id VARCHAR(100)NOT NULL, 
+product_id VARCHAR(100)NOT NULL, 
 order_date VARCHAR(10)NOT NULL, 
  PRIMARY KEY (sold_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id), 
