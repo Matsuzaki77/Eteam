@@ -21,12 +21,12 @@ CREATE TABLE solds
 (sold_id VARCHAR(10) NOT NULL, 
  cart_id VARCHAR(100) NOT NULL, 
  user_id VARCHAR(100) NOT NULL, 
-shohin_id VARCHAR(100)NOT NULL, 
+product_id VARCHAR(100)NOT NULL, 
 order_date VARCHAR(10)NOT NULL, 
  PRIMARY KEY (sold_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id), 
-FOREIGN KEY(cart_id) REFERENCES carts (cart_id), 
-FOREIGN KEY(shohin_id)REFERENCES carts(shohin_id) 
+FOREIGN KEY(cart_id) REFERENCES cart_details  (cart_id), 
+FOREIGN KEY(product_id)REFERENCES cart_details (product_id) 
 ); 
 
 --3 カート 
@@ -45,8 +45,8 @@ CREATE TABLE cart_details
  product_id VARCHAR(100) NOT NULL, 
 Shohin_quanity VARCHAR(1) NOT NULL, 
 PRIMARY KEY(cart_id,product_id), 
-FOREIGN KEY(cart_id) REFERENCES users (cart_id), 
-FOREIGN KEY(product_id) REFERENCES users (shohin_id) 
+FOREIGN KEY(cart_id) REFERENCES carts (cart_id), 
+FOREIGN KEY(product_id) REFERENCES products (product_id) 
 ); 
 
 INSERT INTO products(product_id,product_name,product_price)VALUES("0001","熊本馬刺し５種食べ比べセット250ｇ（約5人前）","6980"); 
