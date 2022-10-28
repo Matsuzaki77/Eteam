@@ -1,4 +1,4 @@
-1 顧客情報 
+--1 顧客情報 
 CREATE TABLE users 
 (user_id VARCHAR(100) NOT NULL, 
 user_name VARCHAR(50) NOT NULL, 
@@ -8,15 +8,15 @@ PRIMARY KEY(user_id)
 ); 
 
  
-2 商品情報 
+--2 商品情報 
 CREATE TABLE products 
-(product_id VARCHAR(1000) NOT NULL, 
+(product_id VARCHAR(100) NOT NULL, 
  product_name VARCHAR(100) NOT NULL, 
  product_price VARCHAR(10) NOT NULL, 
 PRIMARY KEY(product_id) 
 ); 
 
-5 注文 
+--5 注文 
 CREATE TABLE solds  
 (sold_id VARCHAR(10) NOT NULL, 
  cart_id VARCHAR(100) NOT NULL, 
@@ -29,25 +29,24 @@ FOREIGN KEY(cart_id) REFERENCES carts (cart_id),
 FOREIGN KEY(shohin_id)REFERENCES carts(shohin_id) 
 ); 
 
-3 カート 
+--3 カート 
 CREATE TABLE carts 
 (cart_id VARCHAR(100) NOT NULL, 
  User_id VARCHAR(100) NOT NULL, 
-PRIMARY KEY(cart id), 
+PRIMARY KEY(cart_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id) 
 );
 
  
 
-4 カート詳細 
+--4 カート詳細 
 CREATE TABLE cart_details 
 (cart_id VARCHAR(100) NOT NULL, 
  product_id VARCHAR(100) NOT NULL, 
 Shohin_quanity VARCHAR(1) NOT NULL, 
-PRIMARY KEY(cart id), 
-PRIMARY KEY(product_id), 
+PRIMARY KEY(cart_id,product_id), 
 FOREIGN KEY(cart_id) REFERENCES users (cart_id), 
-FOREIGN KEY(shohin_id) REFERENCES users (shohin_id) 
+FOREIGN KEY(product_id) REFERENCES users (shohin_id) 
 ); 
 
 INSART INTO products(product_id,product_name,product_price)VALUES("0001","熊本馬刺し５種食べ比べセット250ｇ（約5人前）","6980"); 
