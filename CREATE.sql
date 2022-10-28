@@ -12,7 +12,7 @@ PRIMARY KEY(user_id)
 CREATE TABLE products 
 (product_id VARCHAR(100) NOT NULL, 
  product_name VARCHAR(100) NOT NULL, 
- product_price VARCHAR(10) NOT NULL, 
+ product_price INTEGER(10) NOT NULL, 
 PRIMARY KEY(product_id) 
 ); 
 
