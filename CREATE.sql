@@ -50,7 +50,7 @@ FOREIGN KEY(cart_id) REFERENCES users (cart_id),
 FOREIGN KEY(shohin_id) REFERENCES users (shohin_id) 
 ); 
 
-INSART INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("0001","熊本馬刺し５種食べ比べセット250ｇ（約5人前）","6980"); 
-INSART INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("0002","一番人気の定番品700g（総重量1kg）","5970"); 
-INSART INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("0003","特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍","13980"); 
-INSART INTO shohins(shohin_id,shohin_name,shohin_price)VALUES("0004","よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋) ","2890"); 
+INSART INTO products(product_id,product_name,product_price)VALUES("0001","熊本馬刺し５種食べ比べセット250ｇ（約5人前）","6980"); 
+INSART INTO products(product_id,product_name,product_price)VALUES("0002","一番人気の定番品700g（総重量1kg）","5970"); 
+INSART INTO products(product_id,product_name,product_price)VALUES("0003","特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍","13980"); 
+INSART INTO products(product_id,product_name,product_price)VALUES("0004","よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋) ","2890"); 
