@@ -12,7 +12,7 @@ PRIMARY KEY(user_id)
 CREATE TABLE products 
 (product_id VARCHAR(100) NOT NULL, 
  product_name VARCHAR(100) NOT NULL, 
- product_price INTEGER(10) NOT NULL, 
+ product_price INT(10) NOT NULL, 
 PRIMARY KEY(product_id) 
 ); 
 
@@ -22,7 +22,7 @@ CREATE TABLE solds
  cart_id VARCHAR(100) NOT NULL, 
  user_id VARCHAR(100) NOT NULL, 
 product_id VARCHAR(100)NOT NULL, 
-order_date VARCHAR(10)NOT NULL, 
+order_date DATE NOT NULL, 
  PRIMARY KEY (sold_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id), 
 FOREIGN KEY(cart_id) REFERENCES cart_details  (cart_id), 
@@ -43,7 +43,7 @@ FOREIGN KEY(user_id) REFERENCES users (user_id)
 CREATE TABLE cart_details 
 (cart_id VARCHAR(100) NOT NULL, 
  product_id VARCHAR(100) NOT NULL, 
-Shohin_quanity VARCHAR(1) NOT NULL, 
+Shohin_quanity INT(10) NOT NULL, 
 PRIMARY KEY(cart_id,product_id), 
 FOREIGN KEY(cart_id) REFERENCES carts (cart_id), 
 FOREIGN KEY(product_id) REFERENCES products (product_id) 
