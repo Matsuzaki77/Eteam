@@ -17,18 +17,7 @@ background-position: center 60%;
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 </head>
 <body>
-<div class="container-fluid">
-        <div class="offset-10 col-4">
-    <?php
-                session_start();
-                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
-	                header('Location:index.php');
-                }
-
-                echo "ようこそ".$_SESSION['name']."さん<br>";
-                echo '<a href="logout.php">ログアウト</a>';
-            ?>
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #000000;">
+<nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #f7a10c;">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -42,16 +31,33 @@ background-position: center 60%;
             </ul>
           </div>
         </div>
+
+<div class="container-fluid">
+        <div class="offset-10 col-4">
+    <?php
+                session_start();
+                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
+	                header('Location:index.php');
+                }
+
+                echo "ようこそ".$_SESSION['name']."さん<br>";
+                echo '<a href="logout.php">ログアウト</a>';
+            ?>
+</div>
+</div>
+
       </nav>
 
       <div name="maindiv" class="container-fluids">
-	<div class="bg-img p-5">
+	<div class="bg-img p-5 mt-3">
 		<div class="container">
-			<img src="img/biglogo.png" class="img-fluid">
-			<p class="text-white text-center">年間ページビュー0回の国内最小級 大不人気レシピサイト「cookpod」!<br>きっとあなたも最高の料理体験を実現できます！さぁ、いますぐレシピを検索！</p>
+			<img class="mx-auto d-block img-fluid" src="img/biglogo.png">
+			<p class="text-white text-center">日本各地のグルメを取り寄せ!<br>ネット通販で地方の味覚があなたの元へ！</p>
 		</div>
 	</div>
-    
+
+
+
         <div class="row mt-2 mb-1">
             <div class="col-12"  style="background-color:#f7a10c;">
                 <h2 class="text-center text-white p-1"></i>商品一覧</h2>
@@ -63,7 +69,8 @@ background-position: center 60%;
                     <img class="card-img-top" src="img/basashi.jpg">
                     <div class="card-body">
                         <h5 class="card-title">熊本馬刺し５種食べ比べセット250ｇ（約5人前）</h5>
-                        <p class="text-warning">>>商品詳細へ</p>
+                        <p class="text-danger text-uppercase">￥6980</p>
+                        <a href="./shohn/shohin1.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
@@ -72,7 +79,8 @@ background-position: center 60%;
                     <img class="card-img-top" src="img/kani.jpg">
                     <div class="card-body">
                         <h5 class="card-title">一番人気のカニ定番品700g（総重量1kg）</h5>
-                        <p class="text-warning">>>商品詳細へ</p>
+                        <p class="text-danger text-uppercase">￥5970</p>
+                        <a href="./shohn/shohin2.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
@@ -81,7 +89,8 @@ background-position: center 60%;
                     <img class="card-img-top" src="img/fugu.jpg">
                     <div class="card-body">
                         <h5 class="card-title">特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍</h5>
-                        <p class="text-warning">>>商品詳細へ</p>
+                        <p class="text-danger text-uppercase">￥13980</p>
+                        <a href="./shohn/shohin3.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +99,8 @@ background-position: center 60%;
                     <img class="card-img-top" src="img/mango.jpg">
                     <div class="card-body">
                         <h5 class="card-title">よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋)</h5>
-                        <p class="text-warning">>>商品詳細へ</p>
+                        <p class="text-danger text-uppercase">￥2890</p>
+                        <a href="./shohn/shohin3.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
