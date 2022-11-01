@@ -66,37 +66,37 @@ background-position: center 60%;
         <div class="row p-1 gy-4">
             <div class="col-lg-3 col-md-6">
                 <div class="card">
-                    <img class="card-img-top" src="img/basashi.jpg">
+                <a href="./shohin/shohin1.php"><img class="card-img-top" src="img/basashi.jpg"></a>
                     <div class="card-body">
                         <h5 class="card-title">熊本馬刺し５種食べ比べセット250ｇ（約5人前）</h5>
                         <p class="text-danger text-uppercase">￥6980</p>
-                        <a href="./shohn/shohin1.php">>>>商品詳細へ</a>
+                        <a href="./shohin/shohin1.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="card">
-                    <img class="card-img-top" src="img/kani.jpg">
+                <a href="./shohin/shohin2.php"><img class="card-img-top" src="img/kani.jpg"></a>
                     <div class="card-body">
                         <h5 class="card-title">一番人気のカニ定番品700g（総重量1kg）</h5>
                         <p class="text-danger text-uppercase">￥5970</p>
-                        <a href="./shohn/shohin2.php">>>>商品詳細へ</a>
+                        <a href="./shohin/shohin2.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="card">
-                    <img class="card-img-top" src="img/fugu.jpg">
+                <a href="./shohin/shohin3.php"><img class="card-img-top" src="img/fugu.jpg"></a>
                     <div class="card-body">
                         <h5 class="card-title">特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍</h5>
                         <p class="text-danger text-uppercase">￥13980</p>
-                        <a href="./shohn/shohin3.php">>>>商品詳細へ</a>
+                        <a href="./shohin/shohin3.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="card">
-                    <img class="card-img-top" src="img/mango.jpg">
+                <a href="./shohin/shohin4.php"><img class="card-img-top" src="img/mango.jpg"></a>
                     <div class="card-body">
                         <h5 class="card-title">よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋)</h5>
                         <p class="text-danger text-uppercase">￥2890</p>
