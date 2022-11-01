@@ -15,7 +15,7 @@
 <body>
 
     <div class="container-fluid">
-        <div class="offset-10 col-4">
+        <div class="row offset-10 col-4">
             <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
@@ -28,6 +28,7 @@
         </div>
         <div class="text-center mt-5">
             <h2>商品一覧</h2>
+            
         </div>
         
     </div>
