@@ -100,7 +100,7 @@ background-position: center 60%;
                     <div class="card-body">
                         <h5 class="card-title">よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋)</h5>
                         <p class="text-danger text-uppercase">￥2890</p>
-                        <a href="./shohn/shohin3.php">>>>商品詳細へ</a>
+                        <a href="./shohin/shohin4.php">>>>商品詳細へ</a>
                     </div>
                 </div>
             </div>
