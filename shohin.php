@@ -49,7 +49,7 @@ background-position: center 60%;
       </nav>
 
       <div name="maindiv" class="container-fluids">
-	<div class="bg-img p-5">
+	<div class="bg-img p-5 mt-3">
 		<div class="container">
 			<img class="mx-auto d-block img-fluid" src="img/biglogo.png">
 			<p class="text-white text-center">日本各地のグルメを取り寄せ!<br>ネット通販で地方の味覚があなたの元へ！</p>
