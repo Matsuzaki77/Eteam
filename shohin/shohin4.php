@@ -13,50 +13,36 @@
 </head>
 <body>
 <div name ="maindiv" class="container">
-<<<<<<< HEAD:shohin/shohin4.php
-    <div class="offset-10 col-4"> -->
-        <?php
-                    session_start();
-                    if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
-                        header('Location:index.php');
-                    }
+    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #f7a10c;">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
     
-                    echo "ようこそ".$_SESSION['name']."さん<br>";
-                    echo '<a href="logout.php">ログアウト</a>';
-                ?> 
-        <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #000000;">
-=======
-                <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #f7a10c;">
-                    <div class="container-fluid">
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                
-                      <div class="collapse navbar-collapse" id="navbarsExample04">
-                        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-                          <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="../shohin.php">トップ</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-            
->>>>>>> 4e76dd213f808b0273c990d692cb13ee4c25b8c0:shohin/shohin4.html
-            <div class="container-fluid">
-                    <div class="offset-10 col-4">
-                <!-- <?php
-                            session_start();
-                            if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
-                                header('Location:index.php');
-                            }
-            
-                            echo "ようこそ".$_SESSION['name']."さん<br>";
-                            echo '<a href="logout.php">ログアウト</a>';
-                        ?> -->
-            </div>
-            </div>
-            
-                  </nav>
+          <div class="collapse navbar-collapse" id="navbarsExample04">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">トップ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+<div class="container-fluid">
+        <div class="offset-10 col-4">
+    <?php
+                session_start();
+                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
+	                header('Location:index.php');
+                }
+
+                echo "ようこそ".$_SESSION['name']."さん<br>";
+                echo '<a href="logout.php">ログアウト</a>';
+            ?>
+</div>
+</div>
+
+      </nav>
     <div class="row">
         <div class="col-sm-4 col-12 mt-3">
             <img src="../img/mango.jpg" class="img-fluid">
