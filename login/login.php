@@ -23,6 +23,13 @@
         <div class="text-center mt-3">
                 <h2>ログイン</h2>
         </div>
+        <div class="text-danger text-center">
+            <?php
+            if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                session_destroy();
+            }
+            ?>
         <form action="logincheck.php" method="post">
             <div class="row offset-4 col-4 mt-3">
                 <label for="txt1" class="form-label">ユーザーID</label>
