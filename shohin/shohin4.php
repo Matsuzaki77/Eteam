@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.2/font/bootstrap-icons.css">
 </head>
 <body>
-<div name ="maindiv" class="container">
 <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #f7a10c;">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -42,6 +41,8 @@
 </div>
 
       </nav>
+
+    <div name ="maindiv" class="container">
     <div class="row">
         <div class="col-sm-4 col-12 mt-3">
             <img src="../img/mango.jpg" class="img-fluid">
