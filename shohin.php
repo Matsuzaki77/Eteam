@@ -26,14 +26,14 @@ background-position: center 60%;
           <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">トップ</a>
+                <a class="nav-link active" aria-current="page" href="shohin.php">トップ</a>
               </li>
             </ul>
           </div>
         </div>
 
 <div class="container-fluid">
-        <div class="offset-10 col-4">
+        <div class="offset-8 col-4">
     <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
