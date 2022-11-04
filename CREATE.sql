@@ -20,6 +20,7 @@ PRIMARY KEY(product_id)
 --3 カート 
 CREATE TABLE carts 
 (cart_id INT(10) NOT NULL, 
+user_id VARCHAR(100) NOT NULL,
 PRIMARY KEY(cart_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id) 
 );
