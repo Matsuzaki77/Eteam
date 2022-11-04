@@ -13,13 +13,13 @@ CREATE TABLE products
 (product_id VARCHAR(100) NOT NULL, 
  product_name VARCHAR(100) NOT NULL, 
  product_price INT(10) NOT NULL, 
+ product_img VARCHAR(100) NOT NULL,
 PRIMARY KEY(product_id) 
 ); 
 
 --3 カート 
 CREATE TABLE carts 
-(cart_id VARCHAR(100) NOT NULL, 
- User_id VARCHAR(100) NOT NULL, 
+(cart_id INT(10) NOT NULL, 
 PRIMARY KEY(cart_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id) 
 );
@@ -28,7 +28,7 @@ FOREIGN KEY(user_id) REFERENCES users (user_id)
 
 --4 カート詳細 
 CREATE TABLE cart_details 
-(cart_id VARCHAR(100) NOT NULL, 
+(cart_id INT(10) NOT NULL, 
  product_id VARCHAR(100) NOT NULL, 
 Shohin_quanity INT(10) NOT NULL, 
 PRIMARY KEY(cart_id,product_id), 
@@ -38,8 +38,8 @@ FOREIGN KEY(product_id) REFERENCES products (product_id)
 
 --5 注文 
 CREATE TABLE solds  
-(sold_id VARCHAR(10) NOT NULL, 
- cart_id VARCHAR(100) NOT NULL, 
+(sold_id INT(10) NOT NULL, 
+ cart_id INT(10) NOT NULL, 
  user_id VARCHAR(100) NOT NULL, 
 product_id VARCHAR(100)NOT NULL, 
 order_date DATE NOT NULL, 
@@ -54,8 +54,10 @@ INSERT INTO products(product_id,product_name,product_price)VALUES("0002","一番
 INSERT INTO products(product_id,product_name,product_price)VALUES("0003","特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍",13980); 
 INSERT INTO products(product_id,product_name,product_price)VALUES("0004","よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋) ",2890); 
 
-INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101201@s.asojuku.ac.jp","藤本","2101201","福岡県筑紫野市");
+INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101201@s.asojuku.ac.jp","藤元","2101201","福岡県筑紫野市");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101188@s.asojuku.ac.jp","永田","2101188","福岡県小郡市");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101135@s.asojuku.ac.jp","石崎","2101135","福岡県三潴郡");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101208@s.asojuku.ac.jp","松﨑","2101208","福岡県福岡市");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101236@s.asojuku.ac.jp","米本","2101236","山口県山口市");
+
+--ALTER TABLE products ADD COLUMN product_image VARCHAR(100); 追加の列
