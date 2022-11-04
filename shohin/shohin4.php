@@ -31,7 +31,7 @@
               <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
-	                header('Location:index.php');
+	                header('Location:../login.php');
                 }
 
                 echo "ようこそ".$_SESSION['name']."さん<br>";
@@ -50,8 +50,16 @@
         <div class="col-sm-8 col-12 mt-3">
             <h3>よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋)</h3>
             <h5 class="mt-2 col-12">価格:2,890円</h5>
+            <select name="cnt">
+              <option value="1" selected>1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+
             <div class="row">
-                <div class="col-sm-6 col-12">
+                <div class="col-sm-6 col-12 mt-2">
                     <button class="btn-sm btn-warning text-white">カートに入れる</button>
                 </div>
                 <div class="row">
