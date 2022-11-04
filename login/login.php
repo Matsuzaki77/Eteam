@@ -40,7 +40,7 @@
                 <label for="txt2" class="form-label">パスワード</label>
                 <input type="password" name="pass" class="form-control" id="txt2">
             </div>
-            <div class="offset-sm-4 offset-3 col-sm-4  col-6 mt-4">
+            <div class="row offset-sm-4 offset-3 col-sm-4  col-6 mt-4">
                 <input type="submit" class="btn btn-warning" name="login" value="ログイン" >
             </div>
         </form>
