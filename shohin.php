@@ -37,7 +37,7 @@ background-position: center 60%;
     <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
-	                header('Location:index.php');
+	                header('Location:login.php');
                 }
 
                 echo "ようこそ".$_SESSION['name']."さん<br>";
