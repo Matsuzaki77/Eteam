@@ -49,10 +49,10 @@ FOREIGN KEY(cart_id) REFERENCES cart_details  (cart_id),
 FOREIGN KEY(product_id)REFERENCES cart_details (product_id) 
 ); 
 
-INSERT INTO products(product_id,product_name,product_price)VALUES("0001","熊本馬刺し５種食べ比べセット250ｇ（約5人前）",6980); 
-INSERT INTO products(product_id,product_name,product_price)VALUES("0002","一番人気のカニ定番品700g（総重量1kg）",5970); 
-INSERT INTO products(product_id,product_name,product_price)VALUES("0003","特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍",13980); 
-INSERT INTO products(product_id,product_name,product_price)VALUES("0004","よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋) ",2890); 
+INSERT INTO products(product_id,product_name,product_price,product_img)VALUES("0001","熊本馬刺し５種食べ比べセット250ｇ（約5人前）",6980,basashi.jpg); 
+INSERT INTO products(product_id,product_name,product_price,product_img)VALUES("0002","一番人気のカニ定番品700g（総重量1kg）",5970,kani.jpg); 
+INSERT INTO products(product_id,product_name,product_price,product_img)VALUES("0003","特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍",13980,fugu.jpg); 
+INSERT INTO products(product_id,product_name,product_price,product_img)VALUES("0004","よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋) ",2890,mango.jpg); 
 
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101201@s.asojuku.ac.jp","藤元","2101201","福岡県筑紫野市");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101188@s.asojuku.ac.jp","永田","2101188","福岡県小郡市");
