@@ -16,7 +16,7 @@ foreach($searchArray as  $row){
 }
 
 if(count($searchArray)==0){
-	
+	$_SESSION['msg'] = "ユーザーIDまたはパスワードが間違っています";
 	header('Location:login.php');
 }
 ?>

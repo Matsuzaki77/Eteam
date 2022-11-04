@@ -23,16 +23,23 @@
         <div class="text-center mt-3">
                 <h2>ログイン</h2>
         </div>
+        <div class="text-danger text-center">
+            <?php
+            if(isset($_SESSION['msg'])){
+                echo $_SESSION['msg'];
+                session_destroy();
+            }
+            ?>
         <form action="logincheck.php" method="post">
-            <div class="row offset-4 col-4 mt-3">
+            <div class="row offset-sm-4 offset-3 col-sm-4  col-6 mt-3">
                 <label for="txt1" class="form-label">ユーザーID</label>
                 <input type="text" name="id" class="form-control" id="txt1" placeholder="name@example.com">
             </div>
-            <div class="row offset-4 col-4 mt-3">
+            <div class="row offset-sm-4 offset-3 col-sm-4  col-6 mt-3">
                 <label for="txt2" class="form-label">パスワード</label>
                 <input type="password" name="pass" class="form-control" id="txt2">
             </div>
-            <div class="row offset-4 col-4 mt-4">
+            <div class="offset-sm-4 offset-3 col-sm-4  col-6 mt-4">
                 <input type="submit" class="btn btn-warning" name="login" value="ログイン" >
             </div>
         </form>
