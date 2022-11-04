@@ -28,7 +28,7 @@
 
 <div class="container-fluid">
         <div class="offset-8 col-4">
-    <?php
+              <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
 	                header('Location:index.php');
@@ -36,8 +36,8 @@
 
                 echo "ようこそ".$_SESSION['name']."さん<br>";
                 echo '<a href="logout.php">ログアウト</a>';
-            ?>
-</div>
+              ?>
+        </div>
 </div>
 
       </nav>
@@ -47,15 +47,15 @@
         <div class="col-sm-4 col-12 mt-3">
             <img src="../img/mango.jpg" class="img-fluid">
         </div>
-        <div class="col-sm-4 mt-3 col-12">
+        <div class="col-sm-8 col-12 mt-3">
             <h3>よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋)</h3>
             <h5 class="mt-2 col-12">価格:2,890円</h5>
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-6 col-12">
                     <button class="btn-sm btn-warning text-white">カートに入れる</button>
                 </div>
                 <div class="row">
-                    <div class="col-sm-15 mt-3 col-12">
+                    <div class="col-sm-12 col-12 mt-3">
                         <h5>商品詳細</h5>
                         <p>内容量：
                         よくばり 冷凍完熟マンゴーセット 1kg(500g×2袋)
