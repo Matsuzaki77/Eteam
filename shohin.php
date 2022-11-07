@@ -4,10 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-=======
-    
->>>>>>> 4f913cca59c3cc4cfe15e56078638094a4ef57a1
     <title>旅食グルメ</title>
     <style>
         .bg-img{
