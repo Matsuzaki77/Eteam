@@ -28,7 +28,7 @@ background-position: center 60%;
                 <a class="nav-link active" aria-current="page" href="../shohin.php">トップ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./cart.php"><i class="bi bi-cart"></i>カート</a>
+                <a class="nav-link active" aria-current="page" href="./cart/cart.php"><i class="bi bi-cart"></i>カート</a>
               </li>
             </ul>
 	
