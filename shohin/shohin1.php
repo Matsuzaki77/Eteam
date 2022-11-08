@@ -23,13 +23,13 @@
                 <a class="nav-link active" aria-current="page" href="../shohin.php">トップ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./cart.php"><i class="bi bi-cart"></i>カート</a>
+                <a class="nav-link active" aria-current="page" href="../cart/cart.php"><i class="bi bi-cart"></i>カート</a>
               </li>
             </ul>
 	
           </div>
           <div class="row col-lg-2 col-md-2 col-4">
-              <?php
+               <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
 	                header('Location:../login.php');
