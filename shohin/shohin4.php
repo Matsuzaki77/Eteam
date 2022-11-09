@@ -1,3 +1,10 @@
+<?php
+// $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
+// $sql="INSERT INTO cart_details(cart_id,product_id,shohin_quantity VALUES(SELECT * FROM carts WHERE cart_id = ? , SELECT * FROM products WHERE = "0004",?)"
+// $ps=$pdo -> prepare($sql);
+// $ps-> bindValue(3, ,PDO::PARAM_INT);
+// $ps->execute();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -60,7 +67,10 @@
             </select>
             <div class="row">
                 <div class="col-sm-6 col-12 mt-2">
-                    <button class="btn-sm btn-warning text-white">カートに入れる</button>
+                  <?php
+                  
+                  ?>  
+                  <button class="btn-sm btn-warning text-white">カートに入れる</button>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 mt-3 col-12">
