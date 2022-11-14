@@ -65,7 +65,7 @@ background-position: center 60%;
         </div>
         <div class="row p-1 gy-4">
             <?php
-                $pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
+                $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
                 $sql = "SELECT * FROM products";
                 $selectdata = $pdo -> query($sql);
                 foreach($selectdata as $row){
