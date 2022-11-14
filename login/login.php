@@ -18,7 +18,7 @@
     <?php
             session_start();
             if(isset($_SESSION['name']) == true && isset($_SESSION['id']) == true){
-                header('Location:shohin.php');
+                header('Location:menu.php');
             }
     ?>
         <div class="text-center mt-3">
