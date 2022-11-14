@@ -57,8 +57,8 @@
               '<div class="col-sm-4 col-12 mt-3">
                 <img src="../img/',$row['product_img'],'" class="img-fluid">
               </div>
-              <form action="../cart/cart.php" method="post">
               <div class="col-sm-8 mt-3 col-12">
+              <form action="../cart/cart.php" method="post">
                 <h3>'.$row['product_name'].'</h3>
                 <h5>価格：'.number_format($row['product_price']).'円</h5>
                 <p>数量：<select name="cnt">';
@@ -66,12 +66,15 @@
                   echo '<option value="',$i,'">',$i,'</option>';
                 }
                 echo '</select></p>';
+                echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
+                echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
+                echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
                 echo
                   '<div class="row">
                     <div class="col-sm-6 col-12 mt-2">
-                      <input type="submit" class="btn-sm btn-warning text-white">カートに入れる</button>   
+                      <input type="submit" class="btn-sm btn-warning text-white" value="カートに入れる">
+                      </form>  
                     </div>
-              </form>
                     <div class="row">
                       <div class="col-sm-12 mt-3 col-12">
                         <h5>商品詳細</h5>
