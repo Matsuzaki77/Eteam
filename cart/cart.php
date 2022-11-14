@@ -20,7 +20,7 @@
           <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../shohin.php">トップ</a>
+                <a class="nav-link active" aria-current="page" href="../menu.php">トップ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="./cart.html"><i class="bi bi-cart"></i>カート</a>
