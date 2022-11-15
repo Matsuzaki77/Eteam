@@ -75,7 +75,7 @@ background-position: center 60%;
                             <a href="./shohin/','shohin'.$row['product_id'].'.php','"><img class="card-img-top" src="img/',$row['product_img'],'"></a>
                             <div class="card-body">
                                 <h5 class="card-title">'.$row['product_name'].'</h5>
-                                <p class="text-danger text-uppercase">￥'.$row['product_price'].'</p>
+                                <p class="text-danger text-uppercase">￥'.number_format($row['product_price']).'</p>
                                 <a href="./shohin/','shohin'.$row['product_id'].'.php','">>>>商品詳細へ</a>
                             </div>
                         </div>
