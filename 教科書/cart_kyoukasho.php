@@ -9,6 +9,18 @@ if(!empty($_SESSION['product'])){
         echo '<td>', $id, '</td>';
         echo '<td><a href="detail.php?id=',$id,'">',
             $product['name'], '</a></td>';
-            //教科書288p
+        echo '<td>', $product['price'],'</td>';
+        echo '<td>', $product['count'], '</td>';
+        $subtotal=$product['price']*$product['count'];
+        $total+=$subtotal;
+        echo '<td>',$subtotal,'</td>';
+        echo '<td><a href="cart-delete.php?id=', $id, '">削除</a></td>';
+        echo '</tr>';
     }
+    echo '<tr><td>合計</td><td></td><td></td><td></td><td>',$total,
+        '</td><td></td><tr>';
+        echo '</table>';
+}else{
+    echo 'カートに商品がありません';
 }
+?>
