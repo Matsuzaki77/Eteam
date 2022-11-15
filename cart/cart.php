@@ -42,17 +42,25 @@
         </div>
 </nav>
 
-<div name ="maindiv" class="container">
+<div name ="maindiv" class="container-fluid">
   <div class="row">
-    <div class="col-6 mt-5  alert-primary">
+    <div class="col-sm-8 col-12 mt-5">
       <h2>ショッピングカート</h2>
       <!--カートに入れた商品を表示-->
-    </div>
-    <div class="offset-1 col-4">
-      <h2 class="alert-primary mt-5">合計：</h2>
-      <div class="row col-10">
-        <input type="submit" class="btn btn-warning mt-2" value="注文確定" >
+      <div class="row mt-2">
+        <div class="col-6">
+          <img src="./img/basashi.jpg" class="img-fluid mt-1">
+        </div>
+        <div class="col-6">
+          <b>熊本馬刺し５種食べ比べセット250ｇ（約5人前）</b>
+          <p>価格:<br>
+          数量：1個 <button class="btn-sm btn-danger ms-4 mt-3 mb-1 ">削除</button>
+        </div>
       </div>
+    </div>
+    <div class="col-sm-3 text-end">
+      <h2 class="mt-5">合計：0円</h2>
+      <button class="btn-lg btn-warning mt-3"><b>注文確定</b></button>
     </div>
   </div>
 </div>
