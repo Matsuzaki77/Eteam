@@ -49,7 +49,7 @@
       <!--カートに入れた商品を表示-->
       <div class="row mt-2">
         <div class="col-6">
-          <img src="./img/basashi.jpg" class="img-fluid mt-1">
+          <img src="../img/basashi.jpg" class="img-fluid mt-1">
         </div>
         <div class="col-6">
           <b>熊本馬刺し５種食べ比べセット250ｇ（約5人前）</b>
