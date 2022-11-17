@@ -46,8 +46,8 @@
     <div name ="maindiv" class="container">
       <div class="row">
           <?php
-            //$pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
-            $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
+            $pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
+            //$pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
             $sql = "SELECT * FROM products WHERE product_id = 3";
             $ps = $pdo -> prepare($sql);
             $ps -> execute(); //[$_REQUEST['product_id']]
@@ -77,16 +77,7 @@
                     <div class="row">
                       <div class="col-sm-12 mt-3 col-12">
                         <h5>商品詳細</h5>
-                        <p>
-                        ・とらふぐ刺身 約100g<br>
-                        ・鍋用上身 約200g<br>
-                        ・鍋用アラ 約400g<br>
-                        ・選べる特典品1点<br>
-                        ・ふぐ皮湯引き 約80g<br>
-                        ・ツミレ 8個<br>
-                        ・フグヒレ 2～3枚<br>
-                        ・ポン酢、薬味<br>
-                        </p>
+                        '.nl2br ($row['product_detail']).'
                       </div>
                     </div>
                   </div>
