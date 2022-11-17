@@ -46,8 +46,8 @@
     <div name ="maindiv" class="container">
       <div class="row">
           <?php
-            $pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
-            //$pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
+            //$pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
+            $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
             $sql = "SELECT * FROM products WHERE product_id = 4";
             $ps = $pdo -> prepare($sql);
             $ps -> execute(); //[$_REQUEST['product_id']]
