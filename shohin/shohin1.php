@@ -73,18 +73,12 @@
                   '<div class="row">
                     <div class="col-sm-6 col-12 mt-2">
                       <input type="submit" class="btn-sm btn-warning text-white" value="カートに入れる">
-                      </form>  
+               </form>  
                     </div>
                     <div class="row">
                       <div class="col-sm-12 mt-3 col-12">
                         <h5>商品詳細</h5>
-                        <p>
-                        ・赤身馬刺し（約50g）1パック<br>
-                        ・霜降り（中トロ）馬刺し（約50g）1パック<br>
-                        ・大トロ馬刺し（約50g）1パック<br>
-                        ・たてがみ刺し（約50g）1パック<br>
-                        ・馬ヒレ 馬刺し用（約50g）1パック
-                        </p>
+                        '.nl2br ($row['product_detail']).'
                       </div>
                     </div>
                   </div>
