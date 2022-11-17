@@ -46,8 +46,8 @@
     <div name ="maindiv" class="container">
       <div class="row">
           <?php
-            //$pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
-            $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
+            $pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
+            //$pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
             $sql = "SELECT * FROM products WHERE product_id = 2";
             $ps = $pdo -> prepare($sql);
             $ps -> execute(); //[$_REQUEST['product_id']]
@@ -78,11 +78,7 @@
                     <div class="row">
                       <div class="col-sm-12 mt-3 col-12">
                         <h5>商品詳細</h5>
-                        <p>
-                          ・一番人気の定番品700g 総重量1kg<br>
-                          ・特大棒ポーション400g 総重量500g<br>
-                          ・特大爪/爪下/肩肉800g 総重量1.1kg<br>
-                        </p>
+                        '.nl2br ($row['product_detail']).'
                       </div>
                     </div>
                   </div>
