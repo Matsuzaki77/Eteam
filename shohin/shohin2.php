@@ -66,9 +66,12 @@
                   echo '<option value="',$i,'">',$i,'</option>';
                 }
                 echo '</select></p>';
-                echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
-                echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
-                echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
+                $_SESSION['product_id'] = $row['product_id'];
+                $_SESSION['product_name'] = $row['product_name'];
+                $_SESSION['product_price'] = $row['product_price'];
+                //echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
+                //echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
+                //echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
                 echo
                   '<div class="row">
                     <div class="col-sm-6 col-12 mt-2">
