@@ -12,6 +12,6 @@
     $ps->execute();
     foreach($ps -> fetchAll() as $row){
         $_SESSION['cart_id'] = $row['cart_id'];
-        header('Location:shohin.php');
+        header('Location:menu.php');
     }
 ?>
