@@ -12,7 +12,7 @@ $searchArray = $ps->fetchAll();
 foreach($searchArray as  $row){
 	$_SESSION['id'] = $row['user_id'];
 	$_SESSION['name'] = $row['user_name'];
-	header('Location:menu.php');
+	header('Location:cartid.php');
 }
 
 if(count($searchArray)==0){
