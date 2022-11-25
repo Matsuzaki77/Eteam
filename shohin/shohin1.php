@@ -67,6 +67,8 @@
                 }
                 echo '</select></p>';
                 $_SESSION['product_id'] = $row['product_id'];
+                $_SESSION['product_name'] = $row['product_name'];
+                $_SESSION['product_price'] = $row['product_price'];
                 // echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
                 // echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
                 // echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
