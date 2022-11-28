@@ -66,6 +66,7 @@
                   echo '<option value="',$i,'">',$i,'</option>';
                 }
                 echo '</select></p>';
+                $_SESSION['product_img'] = $row['product_img'];
                 $_SESSION['product_id'] = $row['product_id'];
                 $_SESSION['product_name'] = $row['product_name'];
                 $_SESSION['product_price'] = $row['product_price'];
