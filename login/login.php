@@ -28,7 +28,7 @@
             <?php
             if(isset($_SESSION['msg'])){
                 echo $_SESSION['msg'];
-                session_destroy();
+                unset($_SESSION['msg']);
             }
             ?>
         </div>
