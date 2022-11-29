@@ -1,3 +1,14 @@
+<?php
+$pdo = new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
+$sql = "INSERT INTO solds(cart_id,user_id,order_date)
+        values(?,?,?)";
+$ps = $pdo->prepare($sql);
+$date = date("Y/m/d");
+$ps->bindValue(1,$_SESSION['cart_id'],PDO::PARAM_STR);
+$ps->bindValue(2,$_SESSION['id'],PDO::PARAM_STR);
+$ps->bindValue(3,$date,PDO::PARAM_STR);
+$ps->execute();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -43,7 +54,7 @@
     <div name="maindiv" class="container">
         <h2 class="mt-3">ありがとうございます。注文が確定されました。</h2>
         <div class="row offset-md-4 col-md-4 mt-5">
-            <input type="submit" class="btn btn-primary" onclick="location.href='../shohin.php'" value="商品一覧へ" >
+            <input type="submit" class="btn btn-primary" onclick="location.href='../menu.php'" value="商品一覧へ" >
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
