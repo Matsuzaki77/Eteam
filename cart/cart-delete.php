@@ -42,8 +42,7 @@
         </div>
 </nav>
 
-<?php require '../cart.php';?>
-<?php require 'menu.php';?>
+
 <?php
 session_start();
 unset($_SESSION['products'][$_REQUEST['product_id']]);
@@ -51,4 +50,3 @@ echo 'カートから商品を削除しました。';
 echo '<hr>';
 require 'cart.php';
 ?>
-<?php require '../footer.php';?>
