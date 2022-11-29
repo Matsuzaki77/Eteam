@@ -58,7 +58,7 @@
                 <img src="../img/',$row['product_img'],'" class="img-fluid">
               </div>
               <div class="col-sm-8 mt-3 col-12">
-              <form action="../cart/cart.php" method="post">
+              <form action="../cart/insertcart.php" method="post">
                 <h3>'.$row['product_name'].'</h3>
                 <h5>価格：'.number_format($row['product_price']).'円</h5>
                 <p>数量：<select name="cnt">';
@@ -66,7 +66,6 @@
                   echo '<option value="',$i,'">',$i,'</option>';
                 }
                 echo '</select></p>';
-                $_SESSION['product_img'] = $row['product_img'];
                 $_SESSION['product_id'] = $row['product_id'];
                 $_SESSION['product_name'] = $row['product_name'];
                 $_SESSION['product_price'] = $row['product_price'];
