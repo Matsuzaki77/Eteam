@@ -20,10 +20,10 @@
           <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../shohin.php">トップ</a>
+                <a class="nav-link active" aria-current="page" href="../menu.php">トップ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./cart.html"><i class="bi bi-cart"></i>カート</a>
+                <a class="nav-link active" aria-current="page" href="./cart.php"><i class="bi bi-cart"></i>カート</a>
               </li>
             </ul>
 	
@@ -59,7 +59,6 @@
     $ps -> execute();
     $selectArray = $ps -> fetchAll();
     $sum = 0;
-
     foreach($selectArray as $row){
     echo
     '<div class="col-sm-8 col-12 mt-2">
@@ -72,6 +71,7 @@
           <b>'.$row['product_name'].'</b>
           <p>価格:'.number_format($row['product_price']).'円<br>
           数量：'.$row['Shohin_quanity'].' <button class="btn-sm btn-danger ms-4 mt-3 mb-1 ">削除</button>';
+          $sum += $row['Shohin_quanity'] * $row['product_price'];
           echo
         '</div>
       </div>
@@ -79,10 +79,8 @@
     </div>';
     }
     echo
-    '<div class="col-sm-3 text-end">';
-    $sum += $row['Shohin_quanity'] * $row['product_price'];
-    echo
-      '<h2 class="mt-5">合計：'.number_format($sum).'円</h2>
+    '<div class="col-sm-3 text-end">
+      <h2 class="mt-5">合計：'.number_format($sum).'円</h2>
       <button class="btn-lg btn-warning mt-3"><b>注文確定</b></button>
     </div>';
     ?>
