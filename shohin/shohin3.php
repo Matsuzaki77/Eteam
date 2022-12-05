@@ -27,7 +27,7 @@
                 <a class="nav-link active" aria-current="page" href="../cart/cart.php"><i class="bi bi-cart"></i>カート</a>
               </li>
             </ul>
-            <div class="row col-lg-2 col-md-2 col-4">
+            <div class="row col-lg-1 col-md-2 col-4">
                <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
