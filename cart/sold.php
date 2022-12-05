@@ -1,15 +1,23 @@
 <?php
 session_start();
 $pdo = new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
-$sql = "INSERT INTO solds(cart_id,user_id,product_id,order_date)
+$selectsql = "SELECT * FROM cart_details WHERE cart_id = ?";
+$selectps = $pdo -> prepare($selectsql);
+$selectps -> bindValue(1,$_SESSION['cart_id'],PDO::PARAM_STR);
+$selectps -> execute();
+foreach($selectps -> fetchAll() as $row){
+  $sql = "INSERT INTO solds(cart_id,user_id,product_id,order_date)
         values(?,?,?,?)";
 $ps = $pdo->prepare($sql);
 $date = date('Y-m-d H:i:s');
-$ps->bindValue(1,$_POST['cart_id'],PDO::PARAM_STR);
+$ps->bindValue(1,$row['cart_id'],PDO::PARAM_STR);
 $ps->bindValue(2,$_SESSION['id'],PDO::PARAM_STR);
-$ps->bindValue(3,$_POST['product_id'],PDO::PARAM_STR);
+$ps->bindValue(3,$row['product_id'],PDO::PARAM_STR);
 $ps->bindValue(4,$date,PDO::PARAM_STR);
 $ps->execute();
+}
+
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
