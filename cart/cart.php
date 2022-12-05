@@ -23,7 +23,7 @@
                 <a class="nav-link active" aria-current="page" href="../menu.php">トップ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./cart.html"><i class="bi bi-cart"></i>カート</a>
+                <a class="nav-link active" aria-current="page" href="./cart.php"><i class="bi bi-cart"></i>カート</a>
               </li>
             </ul>
             <div class="row col-lg-1 col-md-2 col-4">
@@ -67,24 +67,32 @@
         <img src="../img/',$row['product_img'],'" class="img-fluid mt-1">
         </div>
         <div class="col-6">
-        <form action="./confirmation.php" method="post">
+        <form action="./cart-delete.php" method="post">
           <b>'.$row['product_name'].'</b>
           <p>価格:'.number_format($row['product_price']).'円<br>
           数量：'.$row['shohin_quantity'].' <input type="submit" name="delete" value="削除" class="btn-sm btn-danger ms-4 mt-3 mb-1 ">';
           $sum += $row['shohin_quantity'] * $row['product_price'];
-          echo "<input type=\"hidden\" name=\"product_id\" value=\"$row[product_id]\">".
-          "<input type=\"hidden\" name=\"cart_id\" value=\"$row[cart_id]\">".
+          echo '<input type="hidden" name="product_id" value="'.$row['product_id'].'">'.
+          '<input type="hidden" name="cart_id" value="'.$row['cart_id'].'">'.
         '</div>
       </div>
       <hr>
     </div>
     </form>';
     }
+    if(count($selectArray) == 0){
+      echo "<h2 class = mt-3>お客様のカートに商品はありません。</h2>";
+    }else{
+      echo 
+      '<div class="col-sm-3 text-end">
+      <form action="./sold.php" method="post">
+        <h2 class="mt-5">合計：'.number_format($sum).'円</h2>
+        <input type="submit" name="confirm" value="注文確定" class="btn-lg btn-warning mt-3">
+      </form>
+      </div>';
+    }
     echo
-    '<div class="col-sm-3 text-end">
-      <h2 class="mt-5">合計：'.number_format($sum).'円</h2>
-      <input type="submit" name="confirm" value="注文確定" class="btn-lg btn-warning mt-3">
-    </div>';
+    '</div>';
     ?>
   </div>
 </div>
