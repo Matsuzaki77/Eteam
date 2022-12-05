@@ -26,10 +26,8 @@
                 <a class="nav-link active" aria-current="page" href="./cart.html"><i class="bi bi-cart"></i>カート</a>
               </li>
             </ul>
-	
-          </div>
-          <div class="row col-lg-2 col-md-2 col-4">
-              <?php
+            <div class="row col-lg-2 col-md-2 col-4">
+               <?php
                 session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
 	                header('Location:../login.php');
@@ -38,6 +36,7 @@
                 echo "ようこそ".$_SESSION['name']."さん<br>";
                 echo '<a href="../logout.php">ログアウト</a>';
               ?>
+          </div>
           </div>
         </div>
 </nav>
