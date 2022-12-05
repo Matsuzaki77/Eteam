@@ -1,5 +1,6 @@
 <?php
 session_start();
+//$pdo = new PDO('mysql:host=localhost;dbname=usertbl;charset=utf8','webuser','abccsd2');
 $pdo = new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
 $selectsql = "SELECT * FROM cart_details WHERE cart_id = ?";
 $selectps = $pdo -> prepare($selectsql);
@@ -9,7 +10,7 @@ foreach($selectps -> fetchAll() as $row){
   $sql = "INSERT INTO solds(cart_id,user_id,product_id,order_date)
         values(?,?,?,?)";
 $ps = $pdo->prepare($sql);
-$date = date('Y-m-d H:i:s');
+$date = date('Y/m/d H:i:s');
 $ps->bindValue(1,$row['cart_id'],PDO::PARAM_STR);
 $ps->bindValue(2,$_SESSION['id'],PDO::PARAM_STR);
 $ps->bindValue(3,$row['product_id'],PDO::PARAM_STR);
@@ -40,15 +41,14 @@ $ps->execute();
           <div class="collapse navbar-collapse" id="navbarsExample04">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../menu.php">トップ</a>
+                <a class="nav-link active" aria-current="page" href="#"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./cart.html"><i class="bi bi-cart"></i>カート</a>
+                <a class="nav-link active" aria-current="page" href="#"></a>
               </li>
             </ul>
             <div class="row col-lg-1 col-md-2 col-4">
                <?php
-                session_start();
                 if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
 	                header('Location:../login.php');
                 }
@@ -63,7 +63,7 @@ $ps->execute();
     <div name="maindiv" class="container">
         <h2 class="mt-3">ありがとうございます。注文が確定されました。</h2>
         <div class="row offset-md-4 col-md-4 mt-5">
-            <input type="submit" class="btn btn-primary" onclick="location.href='../menu.php'" value="商品一覧へ" >
+            <input type="submit" class="btn btn-primary" onclick="location.href='../cartid.php'" value="商品一覧へ" >
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
