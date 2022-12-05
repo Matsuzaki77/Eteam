@@ -78,14 +78,14 @@
         '</div>
       </div>
       <hr>
-    </div>';
+    </div>
+    </form>';
     }
     echo
     '<div class="col-sm-3 text-end">
       <h2 class="mt-5">合計：'.number_format($sum).'円</h2>
       <input type="submit" name="confirm" value="注文確定" class="btn-lg btn-warning mt-3">
-    </div>
-    </form>';
+    </div>';
     ?>
   </div>
 </div>
