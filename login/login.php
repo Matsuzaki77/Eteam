@@ -17,7 +17,7 @@
     <div class="container-fluid">
     <?php
             session_start();
-            if(isset($_SESSION['name']) == true && isset($_SESSION['id']) == true){
+            if(isset($_SESSION['name']) == true && isset($_SESSION['id']) == true && isset($_SESSION['cart_id']) == true){
                 header('Location:menu.php');
             }
     ?>
