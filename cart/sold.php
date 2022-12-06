@@ -45,7 +45,7 @@ $ps->execute();
                 <a class="nav-link active text-white" aria-current="page" href="#"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active text-white" href="./cart.php"></a>
+                <a class="nav-link active text-white" href="#"></a>
               </li>
               <li class="nav-item d-sm-none">
               <?php
