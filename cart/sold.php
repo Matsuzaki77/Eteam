@@ -33,33 +33,44 @@ $ps->execute();
     <title>注文完了</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #f7a10c;">
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #f7a10c;">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand text-white" href="../menu.php"><img src="../img/smalllogo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f7a10c;">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"></a>
+                <a class="nav-link active text-white" aria-current="page" href="#"></a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#"></a>
+                <a class="nav-link active text-white" href="./cart.php"></a>
               </li>
-            </ul>
-            <div class="row col-lg-1 col-md-2 col-4">
-               <?php
-                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false){
-	                header('Location:../login.php');
+              <li class="nav-item d-sm-none">
+              <?php
+                session_start();
+                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false ){
+                  header('Location:../login.php');
                 }
-
-                echo "ようこそ".$_SESSION['name']."さん<br>";
-                echo '<a href="../logout.php">ログアウト</a>';
+  
+                  echo "ようこそ".$_SESSION['name']."さん<br>";
+                  echo '<a href="../logout.php">ログアウト</a>';
               ?>
+              </li>  
           </div>
-          </div>
+          <div class="row col-lg-2 col-md-3 col-4 d-none d-none d-md-block">
+            <?php
+              if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false ){
+                header('Location:../logout.php');
+              }
+  
+              echo "ようこそ".$_SESSION['name']."さん<br>";
+              echo '<a href="../logout.php">ログアウト</a>';
+            ?>
         </div>
-</nav>
+        </div>
+      </nav>
     <div name="maindiv" class="container">
         <h2 class="mt-3">ありがとうございます。注文が確定されました。</h2>
         <div class="row offset-md-4 col-md-4 mt-5">
