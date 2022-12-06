@@ -30,7 +30,7 @@
             <div class="row col-lg-1 col-md-2 col-4">
                <?php
                 session_start();
-                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false ){
+                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false){
 	                header('Location:../login.php');
                 }
 
