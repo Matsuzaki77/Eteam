@@ -35,18 +35,18 @@
                 }
   
                   echo "ようこそ".$_SESSION['name']."さん<br>";
-                  echo '<a href="../logout.php">ログアウト</a>';
+                  echo '<a href="../logout.php"></a>';
               ?>
               </li>  
           </div>
           <div class="row col-lg-2 col-md-3 col-4 d-none d-none d-md-block">
             <?php
               if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false ){
-                header('Location:../login.php');
+                header('Location:../logout.php');
               }
   
               echo "ようこそ".$_SESSION['name']."さん<br>";
-              echo '<a href="./logout.php">ログアウト</a>';
+              echo '<a href="../logout.php"></a>';
             ?>
         </div>
         </div>
