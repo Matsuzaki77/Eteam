@@ -35,7 +35,7 @@
                 }
   
                   echo "ようこそ".$_SESSION['name']."さん<br>";
-                  echo '<a href="../logout.php"></a>';
+                  echo '<a href="../logout.php">ログアウト</a>';
               ?>
               </li>  
           </div>
@@ -46,7 +46,7 @@
               }
   
               echo "ようこそ".$_SESSION['name']."さん<br>";
-              echo '<a href="../logout.php"></a>';
+              echo '<a href="../logout.php">ログアウト</a>';
             ?>
         </div>
         </div>
