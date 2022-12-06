@@ -44,7 +44,7 @@ background-position: center 60%;
               ?>
               </li>  
           </div>
-          <div class="row col-lg-2 col-md-2 col-4 d-none d-none d-md-block">
+          <div class="row col-lg-2 col-md-3 col-4 d-none d-none d-md-block">
             <?php
               if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false ){
                 header('Location:../login.php');
