@@ -27,7 +27,7 @@ background-position: center 60%;
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active text-white" aria-current="page" href="./shohin.php">トップ</a>
+                <a class="nav-link active text-white" aria-current="page" href="./menu.php">トップ</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link active text-white" href="./cart/cart.php"><i class="bi bi-cart"></i>カート</a>
