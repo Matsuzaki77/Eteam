@@ -20,7 +20,7 @@ background-position: center 60%;
 <body>
 <nav class="navbar navbar-expand-md navbar-light" style="background-color: #f7a10c;">
         <div class="container-fluid">
-          <a class="navbar-brand text-white" href="./shohin.php"><img src="./img/smalllogo.png"></a>
+          <a class="navbar-brand text-white" href="./menu.php"><img src="./img/smalllogo.png"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f7a10c;">
             <span class="navbar-toggler-icon"></span>
           </button>
