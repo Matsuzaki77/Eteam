@@ -7,16 +7,16 @@ $selectps = $pdo -> prepare($selectsql);
 $selectps -> bindValue(1,$_SESSION['cart_id'],PDO::PARAM_STR);
 $selectps -> execute();
 foreach($selectps -> fetchAll() as $row){
-  $sql = "INSERT INTO solds(cart_id,user_id,product_id,order_date)
-        values(?,?,?,?)";
+  $sql = "INSERT INTO solds(cart_id,user_id,order_date)
+        values(?,?,?)";
 $ps = $pdo->prepare($sql);
-$date = date('Y/m/d H:i:s');
-$ps->bindValue(1,$row['cart_id'],PDO::PARAM_STR);
+$date = date('Y/m/d h:i:s');
+$ps->bindValue(1,$row['cart_id'],PDO::PARAM_INT);
 $ps->bindValue(2,$_SESSION['id'],PDO::PARAM_STR);
-$ps->bindValue(3,$row['product_id'],PDO::PARAM_STR);
-$ps->bindValue(4,$date,PDO::PARAM_STR);
+$ps->bindValue(3,$date,PDO::PARAM_STR);
 $ps->execute();
 }
+
 
 
 ?>
