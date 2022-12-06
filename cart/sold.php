@@ -73,7 +73,7 @@ $ps->execute();
       </nav>
     <div name="maindiv" class="container">
         <h2 class="mt-3">ありがとうございます。注文が確定されました。</h2>
-        <div class="row offset-md-4 col-md-4 mt-5">
+        <div class="row offset-md-4 offset-2 col-md-4 col-8 mt-5">
             <input type="submit" class="btn btn-primary" onclick="location.href='../cartid.php'" value="商品一覧へ" >
         </div>
     </div>
