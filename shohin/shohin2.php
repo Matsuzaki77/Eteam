@@ -13,34 +13,44 @@
     <link rel="shortcut icon" href="../img/favicon.ico">
 </head>
 <body>
-<nav class="navbar navbar-expand-md navbar-dark" aria-label="Fourth navbar example" style="background-color: #f7a10c;">
+<nav class="navbar navbar-expand-md navbar-light" style="background-color: #f7a10c;">
         <div class="container-fluid">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand text-white" href="../menu.php"><img src="../img/smalllogo.png"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="background-color: #f7a10c;">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../menu.php">トップ</a>
+                <a class="nav-link active text-white" aria-current="page" href="../menu.php">トップ</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../cart/cart.php"><i class="bi bi-cart"></i>カート</a>
+                <a class="nav-link active text-white" href="../cart/cart.php"><i class="bi bi-cart"></i>カート</a>
               </li>
-            </ul>
-            <div class="row col-lg-1 col-md-2 col-4">
-               <?php
+              <li class="nav-item d-sm-none">
+              <?php
                 session_start();
-                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false){
-	                header('Location:../login.php');
+                if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false ){
+                  header('Location:../login.php');
                 }
-
-                echo "ようこそ".$_SESSION['name']."さん<br>";
-                echo '<a href="../logout.php">ログアウト</a>';
+  
+                  echo "ようこそ".$_SESSION['name']."さん<br>";
+                  echo '<a href="../logout.php">ログアウト</a>';
               ?>
+              </li>  
           </div>
-          </div>
+          <div class="row col-lg-2 col-md-3 col-4 d-none d-none d-md-block">
+            <?php
+              if(isset($_SESSION['name']) == false || isset($_SESSION['id']) == false || isset($_SESSION['cart_id']) == false ){
+                header('Location:../logout.php');
+              }
+  
+              echo "ようこそ".$_SESSION['name']."さん<br>";
+              echo '<a href="../logout.php">ログアウト</a>';
+            ?>
         </div>
-</nav>
+        </div>
+      </nav>
 
     <div name ="maindiv" class="container">
       <div class="row">
@@ -50,8 +60,9 @@
             $sql = "SELECT * FROM products WHERE product_id = 2";
             $ps = $pdo -> prepare($sql);
             $ps -> execute(); //[$_REQUEST['product_id']]
+            $selectArray = $ps -> fetchAll();
           
-            foreach($ps -> fetchAll() as $row){
+            foreach($selectArray as $row){
               echo
               '<div class="col-sm-4 col-12 mt-3">
                 <img src="../img/',$row['product_img'],'" class="img-fluid">
@@ -68,14 +79,14 @@
                 $_SESSION['product_id'] = $row['product_id'];
                 $_SESSION['product_name'] = $row['product_name'];
                 $_SESSION['product_price'] = $row['product_price'];
-                //echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
-                //echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
-                //echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
+                // echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
+                // echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
+                // echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
                 echo
                   '<div class="row">
                     <div class="col-sm-6 col-12 mt-2">
-                    <input type="submit" class="btn-sm btn-warning text-white" value="カートに入れる">
-                    </form>  
+                      <input type="submit" class="btn-sm btn-warning text-white" value="カートに入れる">
+               </form>  
                     </div>
                     <div class="row">
                       <div class="col-sm-12 mt-3 col-12">
@@ -99,4 +110,3 @@
 </script>
 </body>
 </html>
-
