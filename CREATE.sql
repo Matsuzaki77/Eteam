@@ -32,23 +32,21 @@ FOREIGN KEY(user_id) REFERENCES users (user_id)
 CREATE TABLE cart_details 
 (cart_id INT AUTO_INCREMENT NOT NULL, 
  product_id VARCHAR(100) NOT NULL, 
-Shohin_quanity INT(10) NOT NULL, 
-PRIMARY KEY(cart_id,product_id), 
-FOREIGN KEY(cart_id) REFERENCES carts (cart_id), 
+shohin_quantity INT(10) NOT NULL, 
+PRIMARY KEY(cart_id), 
+FOREIGN KEY(cart_id) REFERENCES carts (cart_id),
 FOREIGN KEY(product_id) REFERENCES products (product_id) 
 ); 
 
  
 CREATE TABLE solds  
 (sold_id INT AUTO_INCREMENT NOT NULL, 
- cart_id INT AUTO_INCREMENT NOT NULL, 
- user_id VARCHAR(100) NOT NULL, 
-product_id VARCHAR(100)NOT NULL, 
+ cart_id INT NOT NULL, 
+ user_id VARCHAR(100) NOT NULL,  
 order_date DATE NOT NULL, 
  PRIMARY KEY (sold_id), 
 FOREIGN KEY(user_id) REFERENCES users (user_id), 
-FOREIGN KEY(cart_id) REFERENCES cart_details  (cart_id), 
-FOREIGN KEY(product_id)REFERENCES cart_details (product_id) 
+FOREIGN KEY(cart_id) REFERENCES cart_details  (cart_id) 
 ); 
 
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("1","熊本馬刺し５種食べ比べセット250ｇ（約5人前）",6980,"basashi.jpg",
@@ -65,6 +63,4 @@ INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101188@s.aso
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101135@s.asojuku.ac.jp","石崎","2101135","福岡県三潴郡");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101208@s.asojuku.ac.jp","松﨑","2101208","福岡県福岡市");
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101236@s.asojuku.ac.jp","米本","2101236","山口県山口市");
-
---ALTER TABLE products ADD COLUMN product_image VARCHAR(100); 追加の列
---ALTER TABLE products ADD COLUMN product_detail VARCHAR(800) NOT NULL;
+INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("aso1234@s.asojuku.ac.jp","麻生","Aiueo1234","福岡県福岡市");
