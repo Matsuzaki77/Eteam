@@ -35,7 +35,7 @@
                 }
   
                   echo "ようこそ".$_SESSION['name']."さん<br>";
-                  echo '<a href="./logout.php">ログアウト</a>';
+                  echo '<a href="../logout.php">ログアウト</a>';
               ?>
               </li>  
           </div>
