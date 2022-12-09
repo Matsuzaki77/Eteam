@@ -68,42 +68,42 @@
     $ps -> execute();
     $selectArray = $ps -> fetchAll();
     $sum = 0;
-    foreach($selectArray as $row){
-    echo
-    '<div class="col-sm-8 col-12 mt-2">
+    foreach($selectArray as $row){ ?>
+    <div class="col-sm-8 col-12 mt-2">
       <!--カートに入れた商品を表示-->
       <div class="row mt-2">
         <div class="col-6">
-        <img src="../img/',$row['product_img'],'" class="img-fluid mt-1">
+        <img src="../img/<?php echo $row['product_img'] ?>" class="img-fluid mt-1">
         </div>
         <div class="col-6">
         <form action="./cart-delete.php" method="post">
-          <b>'.$row['product_name'].'</b>
-          <p>価格:'.number_format($row['product_price']).'円<br>
-          数量：'.$row['shohin_quantity'].' <input type="submit" name="delete" value="削除" class="btn-sm btn-danger ms-4 mt-3 mb-1 ">';
-          $sum += $row['shohin_quantity'] * $row['product_price'];
-          echo '<input type="hidden" name="product_id" value="'.$row['product_id'].'">'.
-          '<input type="hidden" name="cart_id" value="'.$row['cart_id'].'">'.
-        '</div>
+          <b><?php echo $row['product_name'] ?></b>
+          <p>価格:<?php echo number_format($row['product_price']) ?>円<br>
+          数量：<?php echo $row['shohin_quantity'] ?> <input type="submit" name="delete" value="削除" class="btn-sm btn-danger ms-4 mt-3 mb-1 ">
+          <?php $sum += $row['shohin_quantity'] * $row['product_price']; ?>
+            <input type="hidden" name="product_id" value="<?php echo $row['product_id'] ?>">
+           <input type="hidden" name="cart_id" value="<?php echo $row['cart_id'] ?>">
+        </div>
       </div>
       <hr>
     </div>
-    </form>';
+    </form>
+    <?php
     }
+
     if(count($selectArray) == 0){
       echo "<h2 class = mt-3>お客様のカートに商品はありません。</h2>";
-    }else{
-      echo 
-      '<div class="col-sm-3 text-end">
+    }else{ ?>
+      <div class="col-sm-3 text-end">
       <form action="./sold.php" method="post">
-        <h2 class="mt-5">合計：'.number_format($sum).'円</h2>
+        <h2 class="mt-5">合計：<?php echo number_format($sum) ?>円</h2>
         <input type="submit" name="confirm" value="注文確定" class="btn-lg btn-warning mt-3">
       </form>
-      </div>';
-    }
-    echo
-    '</div>';
+      </div>
+    <?php
+     }
     ?>
+    </div>
   </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
