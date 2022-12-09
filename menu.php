@@ -77,18 +77,18 @@ background-position: center 60%;
                 $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
                 $sql = "SELECT * FROM products";
                 $selectdata = $pdo -> query($sql);
-                foreach($selectdata as $row){
-                    echo 
-                    '<div class="col-lg-3 col-md-6">
+                foreach($selectdata as $row){ ?>
+                    <div class="col-lg-3 col-md-6">
                         <div class="card">
-                            <a href="./shohin/','shohin'.$row['product_id'].'.php','"><img class="card-img-top" src="img/',$row['product_img'],'"></a>
+                            <a href="./shohin/shohin<?php  echo $row['product_id'] ?>.php"><img class="card-img-top" src="img/<?php echo $row['product_img'] ?>"></a>
                             <div class="card-body">
-                                <h5 class="card-title">'.$row['product_name'].'</h5>
-                                <p class="text-danger text-uppercase">￥'.number_format($row['product_price']).'</p>
-                                <a href="./shohin/','shohin'.$row['product_id'].'.php','">>>>商品詳細へ</a>
+                                <h5 class="card-title"><?php echo $row['product_name'] ?></h5>
+                                <p class="text-danger text-uppercase">￥<?php echo number_format($row['product_price']) ?></p>
+                                <a href="./shohin/shohin<?php echo $row['product_id'] ?>.php">>>>商品詳細へ</a>
                             </div>
                         </div>
-                    </div>';
+                    </div>
+            <?php
                 }
             ?>
         </div>
