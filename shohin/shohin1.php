@@ -62,28 +62,31 @@
             $ps -> execute(); //[$_REQUEST['product_id']]
             $selectArray = $ps -> fetchAll();
           
-            foreach($selectArray as $row){
-              echo
-              '<div class="col-sm-4 col-12 mt-3">
-                <img src="../img/',$row['product_img'],'" class="img-fluid">
+            foreach($selectArray as $row){?>
+              
+              <div class="col-sm-4 col-12 mt-3">
+                <img src="../img/<?php echo $row['product_img'] ?>" class="img-fluid">
               </div>
               <div class="col-sm-8 mt-3 col-12">
               <form action="../cart/insertcart.php" method="post">
-                <h3>'.$row['product_name'].'</h3>
-                <h5>価格：'.number_format($row['product_price']).'円</h5>
-                <p>数量：<select name="cnt">';
+                <h3><?php echo $row['product_name'] ?></h3>
+                <h5>価格：<?php echo number_format($row['product_price']) ?>円</h5>
+                <p>数量：<select name="cnt">
+                <?php
                 for($i = 1;$i <= 10;$i++){
                   echo '<option value="',$i,'">',$i,'</option>';
                 }
-                echo '</select></p>';
+                ?>
+                </select></p>
+                <?php
                 $_SESSION['product_id'] = $row['product_id'];
                 $_SESSION['product_name'] = $row['product_name'];
                 $_SESSION['product_price'] = $row['product_price'];
                 // echo '<input type="hidden" name="product_id" value="',$row['product_id'],'">';
                 // echo '<input type="hidden" name="product_name" value="',$row['product_name'],'">';
                 // echo '<input type="hidden" name="product_price" value="',$row['product_price'],'">';
-                echo
-                  '<div class="row">
+                ?>
+                  <div class="row">
                     <div class="col-sm-6 col-12 mt-2">
                       <input type="submit" class="btn-sm btn-warning text-white" value="カートに入れる">
                </form>  
@@ -91,11 +94,12 @@
                     <div class="row">
                       <div class="col-sm-12 mt-3 col-12">
                         <h5>商品詳細</h5>
-                        '.nl2br ($row['product_detail']).'
+                        <?php echo nl2br ($row['product_detail']) ?>
                       </div>
                     </div>
                   </div>
-              </div>';
+              </div>
+          <?php
             }
           ?>
       </div>
