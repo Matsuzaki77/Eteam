@@ -73,25 +73,25 @@ background-position: center 60%;
             </div>
         </div>
         <div class="row p-1 gy-4">
-            <?php
-                $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
-                $sql = "SELECT * FROM products";
-                $ps = $pdo -> prepare($sql);
-                $ps -> execute();
-                foreach($ps->fetchAll as $row){
-                  $id = $row['product_id'];
-                  echo '<div class="col-lg-3 col-md-6">';
-                      echo '<div class="card">';
-                          echo '<a href="./shohin/shohin.php?id='.$id.'"><img class="card-img-top" src="img/'.$row['product_img'].'"></a>';
-                          echo '<div class="card-body">';
-                              echo '<h5 class="card-title">'.$row['product_name'].'</h5>';
-                              echo '<p class="text-danger text-uppercase">￥'.number_format($row['product_price']).'</p>';
-                              echo '<a href="./shohin/shohin.php?id='.$id.'">>>>商品詳細へ</a>';
-                          echo '</div>';
-                      echo '</div>';
-                  echo '</div>';
+        <?php
+            $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
+            $sql = "SELECT * FROM products";
+            $ps = $pdo -> prepare($sql);
+            $ps -> execute();
+                foreach($ps -> fetchAll() as $row){ 
+                    $id = $row['product_id'];
+                    echo '<div class="col-lg-3 col-md-6">';
+                        echo '<div class="card">';
+                            echo '<a href="./shohin/shohin.php?id='.$id.'"><img class="card-img-top" src="img/'.$row['product_img'].'"></a>';
+                            echo '<div class="card-body">';
+                                echo '<h5 class="card-title">'.$row['product_name'].'</h5>';
+                                echo '<p class="text-danger text-uppercase">￥'.number_format($row['product_price']).'</p>';
+                                echo '<a href="./shohin/shohin.php?id='.$id.'">>>>商品詳細へ</a>';
+                            echo '</div>';
+                        echo '</div>';
+                    echo '</div>';
                 }
-            ?>
+              ?>
         </div>
         <div class="row p-1 mt-5">
             <div class="col-12">
