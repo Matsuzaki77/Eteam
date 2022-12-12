@@ -76,7 +76,7 @@ background-position: center 60%;
             <?php
                 $pdo=new PDO('mysql:host=mysql207.phy.lolipop.lan;dbname=LAA1418446-sys2022;charset=utf8','LAA1418446', 'Eaiueo1234');
                 $sql = "SELECT * FROM products";
-                $ps = $pdo -> query($sql);
+                $ps = $pdo -> prepare($sql);
                 $ps -> execute();
                 foreach($selectdata as $row){
                   $id = $row['product_id'];
