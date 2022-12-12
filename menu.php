@@ -78,7 +78,7 @@ background-position: center 60%;
                 $sql = "SELECT * FROM products";
                 $ps = $pdo -> prepare($sql);
                 $ps -> execute();
-                foreach($selectdata as $row){
+                foreach($ps->fetchAll as $row){
                   $id = $row['product_id'];
                   echo '<div class="col-lg-3 col-md-6">';
                       echo '<div class="card">';
