@@ -63,7 +63,7 @@ INSERT INTO products(product_id,product_name,product_price,product_img,product_d
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("7","厳選トマト 桃太郎 約4kg",3980,"tomato.jpg",
 "商品名：桃太郎トマト\n重量(箱込み)：約4kg\n保存方法：冷蔵庫や冷暗所などの涼しい場所で保存して下さい。\n賞味期限:4日前後目安");
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("6","広島風お好み焼き (豚玉そば入り・イカ天入り)　お試し３枚セット",3500,"okonomiyaki.jpg",
-"お好み焼き　そば入り500ｇ前後(特製ソース50ｇ・青のり0.5ｇ含む)×3\n広島風お好み焼きは、袋のまま切れ目を入れ、電子レンジで温めてください。\n５００Ｗで約９分３０秒　６００Ｗで約８分３０秒");
+"商品名：お好み焼き\nそば入り500ｇ前後(特製ソース50ｇ・青のり0.5ｇ含む)×3\n広島風お好み焼きは、袋のまま切れ目を入れ、電子レンジで温めてください。\n５００Ｗで約９分３０秒　６００Ｗで約８分３０秒");
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("","",,"","");
 
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101201@s.asojuku.ac.jp","藤元","2101201","福岡県筑紫野市");
