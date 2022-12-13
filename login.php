@@ -35,7 +35,7 @@
         <form action="logincheck.php" method="post">
             <div class="row offset-sm-4 offset-3 col-sm-4  col-6 mt-3">
                 <label for="txt1" class="form-label">ユーザーID</label>
-                <input type="text" name="id" class="form-control" id="txt1" placeholder="name@example.com">
+                <input type="email" name="id" class="form-control" id="txt1" placeholder="name@example.com">
             </div>
             <div class="row offset-sm-4 offset-3 col-sm-4  col-6 mt-3">
                 <label for="txt2" class="form-label">パスワード</label>
