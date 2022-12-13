@@ -60,6 +60,9 @@ INSERT INTO products(product_id,product_name,product_price,product_img,product_d
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("5","かぼすぶり丼 大分県産 季節限定かぼすぶり丼 70g×4袋セット",3480,"buri.jpg",
 "商品名：かぼすぶり丼\n名称：海産物加工品\n内容量：かぼすぶり丼 70g×4袋\n賞味期限：パッケージに記載（約90日）\n保存方法：冷凍(-18度以下)で保存してください。\nお召し上がり方：流水で解凍し、温かいご飯にかければ出来上がりです。\n区分：食品");
 
+INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("7","厳選トマト 桃太郎 約4kg",3980,"tomato.jpg",
+"商品名：桃太郎トマト\n重量(箱込み)：約4kg\n保存方法：冷蔵庫や冷暗所などの涼しい場所で保存して下さい。\n賞味期限:4日前後目安");
+
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("","",,"","");
 
 INSERT INTO users(user_id,user_name,user_pass,user_address)VALUES("2101201@s.asojuku.ac.jp","藤元","2101201","福岡県筑紫野市");
