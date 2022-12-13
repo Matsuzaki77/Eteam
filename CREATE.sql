@@ -56,10 +56,16 @@ INSERT INTO products(product_id,product_name,product_price,product_img,product_d
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("3","特典付き国産養殖とらふぐ・セット(3-4人前)送料無料・冷凍",13980,"fugu.jpg",
 "・とらふぐ刺身 約100g\n・鍋用上身 約200g\n・鍋用アラ 約400g\n・選べる特典品1点\n・ふぐ皮湯引き 約80g\n・ツミレ 8個\n・フグヒレ 2～3枚\n・ポン酢、薬味"); 
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("4","よくばり冷凍 完熟マンゴーセット 1kg(500g×2袋) ",2890,"mango.jpg",
+<<<<<<< HEAD
 "よくばり 冷凍完熟マンゴーセット 1kg(500g×2袋)\n【内容量】1kg(500g×2袋)\n【保存方法】　冷凍\n【賞味期限】　製造より2年\nマンゴーの種類： その他マンゴー\n温度帯： 冷凍");
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("6","広島風お好み焼き (豚玉そば入り・イカ天入り)　お試し３枚セット",3500,"okonomiyaki.jpg",
 "お好み焼き　そば入り500ｇ前後(特製ソース50ｇ・青のり0.5ｇ含む)×3");
 
+=======
+"よくばり 冷凍完熟マンゴーセット 1kg(500g×2袋)\n【内容量】1kg(500g×2袋)\n【保存方法】　冷凍\n【賞味期限】　製造より2年\nマンゴーの種類： その他マンゴー\n温度帯： 冷凍"); 
+INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("5","かぼすぶり丼 大分県産 季節限定かぼすぶり丼 70g×4袋セット",3480,"buri.jpg",
+"商品名：かぼすぶり丼\n名称：海産物加工品\n内容量：かぼすぶり丼 70g×4袋\n賞味期限：パッケージに記載（約90日）\n保存方法：冷凍(-18度以下)で保存してください。\nお召し上がり方：流水で解凍し、温かいご飯にかければ出来上がりです。\n区分：食品");
+>>>>>>> 86a116633aefbf7284b5712f7321635443fb8f4b
 
 INSERT INTO products(product_id,product_name,product_price,product_img,product_detail)VALUES("","",,"","");
 
